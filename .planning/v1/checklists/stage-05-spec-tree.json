@@ -1,0 +1,38 @@
+{
+  "stage": "5",
+  "name": "Spec tree",
+  "version": "vX",
+  "status": "done",
+  "prose": "Express architecture as filesystem hierarchy. The tree must be reviewable from `tree` output alone.",
+  "items": [
+    {
+      "text": "Express architecture as filesystem hierarchy.",
+      "done": true
+    }
+  ],
+  "gates": [
+    {
+      "text": "The tree must be reviewable from `tree` output alone.",
+      "done": true
+    },
+    {
+      "text": "User has reviewed and approved",
+      "done": true
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "CA-SCRM-1, CA-SCRM-2 (tree communicates use cases, stranger understands domain from `tree`)",
+      "done": false
+    },
+    {
+      "text": "PP-CRAFT-5 (names reveal intent)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 3
+  }
+}

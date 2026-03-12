@@ -1,0 +1,709 @@
+{
+  "source": "DAG.md",
+  "stages": [
+    {
+      "stage": "1",
+      "name": "Raw requirements",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Capture user's words verbatim. Do not modify after initial capture.",
+      "items": [
+        {
+          "text": "Capture user's words verbatim.",
+          "done": false
+        },
+        {
+          "text": "Do not modify after initial capture.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "PP-REQ-1, PP-REQ-2, PP-REQ-3, PP-REQ-4 (discover with users, feedback loops, policy as metadata, glossary)",
+          "done": false
+        },
+        {
+          "text": "PP-APPROACH-4 (keep options reversible \u2014 don't lock in HOW decisions)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 3
+      }
+    },
+    {
+      "stage": "2",
+      "name": "Clean requirements",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Derive from raw requirements first, unbiased. Then reconcile against previous clean requirements and upstream feedback. Organize by domain. Write WHAT, not HOW.",
+      "items": [
+        {
+          "text": "Derive from raw requirements first, unbiased.",
+          "done": false
+        },
+        {
+          "text": "Then reconcile against previous clean requirements and upstream feedback.",
+          "done": false
+        },
+        {
+          "text": "Organize by domain.",
+          "done": false
+        },
+        {
+          "text": "Write WHAT, not HOW.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "PP-REQ-1, PP-REQ-2, PP-REQ-3, PP-REQ-4 (discover with users, feedback loops, policy as metadata, glossary)",
+          "done": false
+        },
+        {
+          "text": "PP-APPROACH-4 (keep options reversible \u2014 don't lock in HOW decisions)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 5
+      }
+    },
+    {
+      "stage": "3",
+      "name": "Research",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Survey existing code, tools, skills, prior art, and technical constraints. Write findings to disk.",
+      "items": [
+        {
+          "text": "Survey existing code, tools, skills, prior art, and technical constraints.",
+          "done": false
+        },
+        {
+          "text": "Write findings to disk.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "PP-APPROACH-1 (tracer bullets \u2014 thin end-to-end when surveying unknowns)",
+          "done": false
+        },
+        {
+          "text": "PP-APPROACH-2 (prototypes to learn \u2014 disposable explorations before committing)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 3
+      }
+    },
+    {
+      "stage": "4",
+      "name": "Decomposition",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Map requirements to spec units. Identify dependencies. Sequence build order. Produce: spec unit list with dependency graph. Produce: **boundary dependency map** \u2014 for every edge in the dependency graph, name the shared boundary and its contract type (naming contract, data shape, event type, state transition, route path). The boundary dependency map is a living artifact \u2014 create it here, refine it at every reflect gate through Stage 9.",
+      "items": [
+        {
+          "text": "Map requirements to spec units.",
+          "done": false
+        },
+        {
+          "text": "Identify dependencies.",
+          "done": false
+        },
+        {
+          "text": "Sequence build order.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "Produce: spec unit list with dependency graph.",
+          "done": false
+        },
+        {
+          "text": "Produce: boundary dependency map \u2014 for every edge in the dependency graph, name the shared boundary and its contract type (naming contract, data shape, event type, state transition, route path).",
+          "done": false
+        },
+        {
+          "text": "The boundary dependency map is a living artifact \u2014 create it here, refine it at every reflect gate through Stage 9.",
+          "done": false
+        },
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "CS-SEP-1 through CS-SEP-5 (full pass \u2014 read/write split, command/query, layers, bounded contexts, API surface)",
+          "done": false
+        },
+        {
+          "text": "CS-DATA-1 through CS-DATA-6 (full pass \u2014 ownership, state model, storage, schema, lifecycle, derived data)",
+          "done": false
+        },
+        {
+          "text": "CS-COMM-1 through CS-COMM-5 (full pass \u2014 sync/async, integrations, events, API style, serialization)",
+          "done": false
+        },
+        {
+          "text": "CS-CONSIST-1 through CS-CONSIST-5 (full pass \u2014 consistency model, transactions, concurrency, idempotency, ordering)",
+          "done": false
+        },
+        {
+          "text": "CS-SCALE-1 through CS-SCALE-5 (full pass \u2014 load, hot path, caching, Big-O, resource bounds)",
+          "done": false
+        },
+        {
+          "text": "CS-SEC-1 through CS-SEC-5 (full pass \u2014 trust boundaries, authn, authz, secrets, input validation)",
+          "done": false
+        },
+        {
+          "text": "CS-ERR-1 through CS-ERR-5 (full pass \u2014 failure taxonomy, retry, partial failure, degradation, observability)",
+          "done": false
+        },
+        {
+          "text": "PP-ORTH-1, PP-ORTH-3 (decomposed specs are self-contained, changes don't ripple)",
+          "done": false
+        },
+        {
+          "text": "PP-DRY-1 (no duplicated knowledge across spec units)",
+          "done": false
+        },
+        {
+          "text": "CA-COMP-1 (no cycles in dependency graph)",
+          "done": false
+        },
+        {
+          "text": "CA-COMP-4, CA-COMP-5 (classes that change together / are used together belong in same component)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 7
+      }
+    },
+    {
+      "stage": "5",
+      "name": "Spec tree",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Express architecture as filesystem hierarchy. The tree must be reviewable from `tree` output alone.",
+      "items": [
+        {
+          "text": "Express architecture as filesystem hierarchy.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "The tree must be reviewable from `tree` output alone.",
+          "done": false
+        },
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "CA-SCRM-1, CA-SCRM-2 (tree communicates use cases, stranger understands domain from `tree`)",
+          "done": false
+        },
+        {
+          "text": "PP-CRAFT-5 (names reveal intent)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 3
+      }
+    },
+    {
+      "stage": "6",
+      "name": "Specifications",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Fill each spec with behavior, constraints, and edge cases. Write WHAT, not HOW. Leave zero judgment calls for the implementer. After specs are approved, a **separate agent** (not the spec-writing agents) reads each spec and extracts every testable behavioral contract to `test-contracts.md` \u2014 input/output pairs, precondition/postcondition pairs, edge case expected outcomes. Vague behavior (\"handles errors appropriately\") is not a contract \u2014 rewrite the spec. `test-contracts.md` is a **living artifact**: behavioral contracts (Stage 6) \u2192 test file stubs (Stage 7) \u2192 test pseudo-logic (Stage 7d) \u2192 implemented tests (Stage 8) \u2192 reconciled (Stage 8b). **Reflect gate: cross-spec contract reconciliation.** After all specs are written, assign one agent per boundary edge (from the dependency map). That agent reads both specs and extracts the contract each side assumes \u2014 function name, event type, DOM ID, state name, route path. Mismatches are findings. Append newly discovered boundaries to the dependency map.",
+      "items": [
+        {
+          "text": "Fill each spec with behavior, constraints, and edge cases.",
+          "done": false
+        },
+        {
+          "text": "Write WHAT, not HOW.",
+          "done": false
+        },
+        {
+          "text": "Leave zero judgment calls for the implementer.",
+          "done": false
+        },
+        {
+          "text": "After specs are approved, a separate agent (not the spec-writing agents) reads each spec and extracts every testable behavioral contract to `test-contracts.md` \u2014 input/output pairs, precondition/postcondition pairs, edge case expected outcomes.",
+          "done": false
+        },
+        {
+          "text": "Vague behavior (\"handles errors appropriately\") is not a contract \u2014 rewrite the spec.",
+          "done": false
+        },
+        {
+          "text": "After all specs are written, assign one agent per boundary edge (from the dependency map).",
+          "done": false
+        },
+        {
+          "text": "That agent reads both specs and extracts the contract each side assumes \u2014 function name, event type, DOM ID, state name, route path.",
+          "done": false
+        },
+        {
+          "text": "Append newly discovered boundaries to the dependency map.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "`test-contracts.md` is a living artifact: behavioral contracts (Stage 6) \u2192 test file stubs (Stage 7) \u2192 test pseudo-logic (Stage 7d) \u2192 implemented tests (Stage 8) \u2192 reconciled (Stage 8b).",
+          "done": false
+        },
+        {
+          "text": "Reflect gate: cross-spec contract reconciliation.",
+          "done": false
+        },
+        {
+          "text": "Mismatches are findings.",
+          "done": false
+        },
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "CS-* spot check (verify specs are consistent with Stage 4 decisions \u2014 new questions are findings)",
+          "done": false
+        },
+        {
+          "text": "PP-CONTRACT-1 (preconditions, postconditions, invariants defined)",
+          "done": false
+        },
+        {
+          "text": "PP-REQ-3 (policy is metadata \u2014 specs don't hardcode business rules)",
+          "done": false
+        },
+        {
+          "text": "PP-REQ-4 (glossary \u2014 terms consistent across specs)",
+          "done": false
+        },
+        {
+          "text": "TDD-COV-1, TDD-COV-2, TDD-COV-3 (contracts cover happy path, edge cases, error cases)",
+          "done": false
+        },
+        {
+          "text": "CA-BOUND-3 (data crossing boundaries is simple structures)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 12
+      }
+    },
+    {
+      "stage": "7",
+      "name": "Scaffolding",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Create stubs, file headers, pseudo-logic per project conventions. Execute in two phases: tree first (biased generalist), then content (unbiased specialists per spec). **Manifest-driven file creation:** the tree agent produces a `.scaffold-manifest` file (tab-separated: path, spec, purpose, responsibilities, not_responsible_for, dependencies) instead of creating files individually. Run `python3 scripts/scaffold-from-manifest.py <manifest> --project-root <path>` to create the directory structure and stamp every file with its `SPEC:` provenance tag and comment header in one pass. See `templates/scaffold-manifest-format.md` for the manifest format. This eliminates hundreds of individual file-creation tool calls. Every scaffold file header must include a `SPEC:` provenance tag pointing to the spec that owns it (e.g. `SPEC: .planning/v2/specs/s06-gemm.md`). The tree agent also produces: test file stubs for every contract in `test-contracts.md`, and a **pattern registry** (`pattern-registry.md`) declaring the one chosen pattern per cross-cutting concern (HTTP client, error handling, data access, logging, config, template rendering). **Convergence gate:** zero tree mutations across specialist passes. After specialist passes converge, run **cross-reference reconciliation**: extract every string-based cross-reference (template names, DOM IDs, CSS classes, route paths, config keys) from all scaffold files and verify both sides agree. Run **pattern consistency check**: verify all scaffold files follow the pattern registry \u2014 deviations are findings. Run **test contract coverage check**: verify every contract in `test-contracts.md` has a test stub in the scaffold. Run **spec provenance check**: `grep -rh \"SPEC:\" src/` must cover every spec in the decomposition \u2014 missing or mismatched tags are findings. Name mismatches between scaffold files are findings that block Stage 8. Use the boundary dependency map from Stage 4 (refined at Stage 6) as input \u2014 check every named edge. Append newly discovered file-level boundaries to the map.",
+      "items": [
+        {
+          "text": "Create stubs, file headers, pseudo-logic per project conventions.",
+          "done": false
+        },
+        {
+          "text": "Execute in two phases: tree first (biased generalist), then content (unbiased specialists per spec).",
+          "done": false
+        },
+        {
+          "text": "Manifest-driven file creation: the tree agent produces a `.scaffold-manifest` file (tab-separated: path, spec, purpose, responsibilities, not_responsible_for, dependencies) instead of creating files individually.",
+          "done": false
+        },
+        {
+          "text": "Run `python3 scripts/scaffold-from-manifest.py <manifest> --project-root <path>` to create the directory structure and stamp every file with its `SPEC:` provenance tag and comment header in one pass.",
+          "done": false
+        },
+        {
+          "text": "See `templates/scaffold-manifest-format.md` for the manifest format.",
+          "done": false
+        },
+        {
+          "text": "This eliminates hundreds of individual file-creation tool calls.",
+          "done": false
+        },
+        {
+          "text": "`SPEC: .planning/v2/specs/s06-gemm.md`).",
+          "done": false
+        },
+        {
+          "text": "The tree agent also produces: test file stubs for every contract in `test-contracts.md`, and a pattern registry (`pattern-registry.md`) declaring the one chosen pattern per cross-cutting concern (HTTP client, error handling, data access, logging, config, template rendering).",
+          "done": false
+        },
+        {
+          "text": "Use the boundary dependency map from Stage 4 (refined at Stage 6) as input \u2014 check every named edge.",
+          "done": false
+        },
+        {
+          "text": "Append newly discovered file-level boundaries to the map.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "Every scaffold file header must include a `SPEC:` provenance tag pointing to the spec that owns it (e.g.",
+          "done": false
+        },
+        {
+          "text": "Convergence gate: zero tree mutations across specialist passes.",
+          "done": false
+        },
+        {
+          "text": "After specialist passes converge, run cross-reference reconciliation: extract every string-based cross-reference (template names, DOM IDs, CSS classes, route paths, config keys) from all scaffold files and verify both sides agree.",
+          "done": false
+        },
+        {
+          "text": "Run pattern consistency check: verify all scaffold files follow the pattern registry \u2014 deviations are findings.",
+          "done": false
+        },
+        {
+          "text": "Run test contract coverage check: verify every contract in `test-contracts.md` has a test stub in the scaffold.",
+          "done": false
+        },
+        {
+          "text": "Run spec provenance check: `grep -rh \"SPEC:\" src/` must cover every spec in the decomposition \u2014 missing or mismatched tags are findings.",
+          "done": false
+        },
+        {
+          "text": "Name mismatches between scaffold files are findings that block Stage 8.",
+          "done": false
+        },
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "CS-* verify scaffold embodies Stage 4 decisions (event types exist if async, separate read/write models if CQRS, etc.)",
+          "done": false
+        },
+        {
+          "text": "PP-APPROACH-3 (no broken windows \u2014 fix bad naming/structure immediately)",
+          "done": false
+        },
+        {
+          "text": "PP-DRY-1, PP-DRY-2 (single source of truth, no inter-developer duplication)",
+          "done": false
+        },
+        {
+          "text": "PP-ORTH-1 (components self-contained)",
+          "done": false
+        },
+        {
+          "text": "IC-LAY-1, IC-LAY-2, IC-LAY-3 (layering discipline \u2014 structure before headers before signatures)",
+          "done": false
+        },
+        {
+          "text": "IC-HDR-1 through IC-HDR-5 (every file has PURPOSE, RESPONSIBILITIES, NOT RESPONSIBLE FOR, DEPENDENCIES; headers permanent)",
+          "done": false
+        },
+        {
+          "text": "CA-DEP-1, CA-DEP-2, CA-DEP-5 (dependencies inward, entities clean, DIP at boundaries)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 18
+      }
+    },
+    {
+      "stage": "8",
+      "name": "Implementation",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Write code between scaffold comments. Implementation agents may only create or modify files that exist in the scaffold tree. Implement tests alongside production code, not after. Follow the pattern registry for every cross-cutting concern.",
+      "items": [
+        {
+          "text": "Write code between scaffold comments.",
+          "done": false
+        },
+        {
+          "text": "Implementation agents may only create or modify files that exist in the scaffold tree.",
+          "done": false
+        },
+        {
+          "text": "Implement tests alongside production code, not after.",
+          "done": false
+        },
+        {
+          "text": "Follow the pattern registry for every cross-cutting concern.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "PP-CRAFT-1 (no programming by coincidence)",
+          "done": false
+        },
+        {
+          "text": "PP-CRAFT-2 (Big-O considered)",
+          "done": false
+        },
+        {
+          "text": "PP-CRAFT-3 (refactor on duplication or non-orthogonality)",
+          "done": false
+        },
+        {
+          "text": "PP-CRAFT-4 (test-first drives design)",
+          "done": false
+        },
+        {
+          "text": "PP-CRAFT-6 (small steps, check feedback)",
+          "done": false
+        },
+        {
+          "text": "PP-CONTRACT-2 (crash early)",
+          "done": false
+        },
+        {
+          "text": "PP-CONTRACT-3 (assertions for impossible conditions)",
+          "done": false
+        },
+        {
+          "text": "PP-CONTRACT-4 (finish what you start)",
+          "done": false
+        },
+        {
+          "text": "PP-DECOUPLE-1 through PP-DECOUPLE-5 (no train wrecks, Tell Don't Ask, Demeter, interfaces over inheritance, config externalized)",
+          "done": false
+        },
+        {
+          "text": "TDD-CYC-1 through TDD-CYC-6 (full Red-Green-Refactor cycle)",
+          "done": false
+        },
+        {
+          "text": "IC-SCALE-1 through IC-SCALE-4 (10x/100x/1000x, timeouts, streaming, assumptions documented)",
+          "done": false
+        },
+        {
+          "text": "IC-DATA-1 through IC-DATA-5 (schema validation at boundaries)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 5
+      }
+    },
+    {
+      "stage": "8b",
+      "name": "Scaffold Reconciliation",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Convergent single-pass verification. For every file in the scaffold tree, classify as IMPLEMENTED, SUPERSEDED (name the replacement), INTENTIONAL-EMPTY (state the rationale), or MISSING (this is a finding). Diff scaffold file list against implementation file list. Any file in one but not the other is a finding. MISSING entries block Stage 9. **Wiring check**: for every coordinator/orchestrator/bridge file, verify it actually calls the sub-packages it references. A file that imports a package but never calls its functions is a finding. **Test contract reconciliation**: for every contract in `test-contracts.md`, verify a test function exists with actual assertions (not stubs). Contracts without tests block Stage 9. **Pattern drift check**: verify all implementation files follow `pattern-registry.md`. No package may use a different approach than the registered pattern for the same concern. **Spec provenance reconciliation**: `grep -rh \"SPEC:\" src/` \u2014 every spec must have at least one file, every file must trace to exactly one spec, no orphan tags pointing to nonexistent specs. **Dependency map update**: append newly discovered function-level boundaries. The map now has three layers: spec-to-spec (Stage 4/6), file-to-file (Stage 7), function-to-function (Stage 8b).",
+      "items": [
+        {
+          "text": "Convergent single-pass verification.",
+          "done": false
+        },
+        {
+          "text": "Diff scaffold file list against implementation file list.",
+          "done": false
+        },
+        {
+          "text": "Any file in one but not the other is a finding.",
+          "done": false
+        },
+        {
+          "text": "A file that imports a package but never calls its functions is a finding.",
+          "done": false
+        },
+        {
+          "text": "No package may use a different approach than the registered pattern for the same concern.",
+          "done": false
+        },
+        {
+          "text": "Dependency map update: append newly discovered function-level boundaries.",
+          "done": false
+        },
+        {
+          "text": "The map now has three layers: spec-to-spec (Stage 4/6), file-to-file (Stage 7), function-to-function (Stage 8b).",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "For every file in the scaffold tree, classify as IMPLEMENTED, SUPERSEDED (name the replacement), INTENTIONAL-EMPTY (state the rationale), or MISSING (this is a finding).",
+          "done": false
+        },
+        {
+          "text": "MISSING entries block Stage 9.",
+          "done": false
+        },
+        {
+          "text": "Wiring check: for every coordinator/orchestrator/bridge file, verify it actually calls the sub-packages it references.",
+          "done": false
+        },
+        {
+          "text": "Test contract reconciliation: for every contract in `test-contracts.md`, verify a test function exists with actual assertions (not stubs).",
+          "done": false
+        },
+        {
+          "text": "Contracts without tests block Stage 9.",
+          "done": false
+        },
+        {
+          "text": "Pattern drift check: verify all implementation files follow `pattern-registry.md`.",
+          "done": false
+        },
+        {
+          "text": "Spec provenance reconciliation: `grep -rh \"SPEC:\" src/` \u2014 every spec must have at least one file, every file must trace to exactly one spec, no orphan tags pointing to nonexistent specs.",
+          "done": false
+        },
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "PP-DELIVER-4 (find bugs once \u2014 every bug gets a test)",
+          "done": false
+        },
+        {
+          "text": "PP-DRY-2 (no inter-developer duplication across implemented specs)",
+          "done": false
+        },
+        {
+          "text": "PP-ORTH-3 (change to one module doesn't ripple)",
+          "done": false
+        },
+        {
+          "text": "IC-VER-1 through IC-VER-4 (compiles, imports correct, tests pass, verified before declaring done)",
+          "done": false
+        },
+        {
+          "text": "TDD-QUAL-1 (tests verify behavior not implementation)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 15
+      }
+    },
+    {
+      "stage": "9",
+      "name": "Verify",
+      "version": "vX",
+      "status": "not-started",
+      "prose": "Two layers. Layer 1 (static): run build, vet, and test, including frontend assertions \u2014 template manifest completeness, CSS link validation, orphan template detection. Layer 2 (runtime): run smoke tests \u2014 app boot, primary flow, moving parts connect. Coordinator writes runbook, spawns verify agent.",
+      "items": [
+        {
+          "text": "Two layers.",
+          "done": false
+        },
+        {
+          "text": "Layer 1 (static): run build, vet, and test, including frontend assertions \u2014 template manifest completeness, CSS link validation, orphan template detection.",
+          "done": false
+        },
+        {
+          "text": "Layer 2 (runtime): run smoke tests \u2014 app boot, primary flow, moving parts connect.",
+          "done": false
+        }
+      ],
+      "gates": [
+        {
+          "text": "Coordinator writes runbook, spawns verify agent.",
+          "done": false
+        },
+        {
+          "text": "User has reviewed and approved",
+          "done": false
+        }
+      ],
+      "cross_refs": [
+        {
+          "text": "PP-DELIVER-1 (version control drives builds/tests/releases)",
+          "done": false
+        },
+        {
+          "text": "PP-DELIVER-2 (no manual procedures)",
+          "done": false
+        },
+        {
+          "text": "PP-DELIVER-3 (not done until all tests pass)",
+          "done": false
+        },
+        {
+          "text": "PP-DELIVER-5 (state coverage, not just code coverage)",
+          "done": false
+        },
+        {
+          "text": "CA-TEST-1, CA-TEST-2 (behavior not implementation, structured by use case)",
+          "done": false
+        },
+        {
+          "text": "TDD-BUG-1 through TDD-BUG-4 (bug fix protocol \u2014 reproduce, confirm, fix, full suite)",
+          "done": false
+        }
+      ],
+      "findings": [],
+      "progress": {
+        "done": 0,
+        "total": 5
+      }
+    }
+  ]
+}

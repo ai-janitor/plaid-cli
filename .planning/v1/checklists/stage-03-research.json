@@ -1,0 +1,41 @@
+{
+  "stage": "3",
+  "name": "Research",
+  "version": "vX",
+  "status": "done",
+  "prose": "Survey existing code, tools, skills, prior art, and technical constraints. Write findings to disk.",
+  "items": [
+    {
+      "text": "Survey existing code, tools, skills, prior art, and technical constraints.",
+      "done": true
+    },
+    {
+      "text": "Write findings to disk.",
+      "done": true
+    },
+    {
+      "done": true
+    }
+  ],
+  "gates": [
+    {
+      "text": "User has reviewed and approved",
+      "done": true
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "PP-APPROACH-1 (tracer bullets — thin end-to-end when surveying unknowns)",
+      "done": false
+    },
+    {
+      "text": "PP-APPROACH-2 (prototypes to learn — disposable explorations before committing)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 3
+  }
+}

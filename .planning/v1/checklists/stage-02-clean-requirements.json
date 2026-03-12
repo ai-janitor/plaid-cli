@@ -1,0 +1,46 @@
+{
+  "stage": "2",
+  "name": "Clean requirements",
+  "version": "vX",
+  "status": "done",
+  "prose": "Derive from raw requirements first, unbiased. Then reconcile against previous clean requirements and upstream feedback. Organize by domain. Write WHAT, not HOW.",
+  "items": [
+    {
+      "text": "Derive from raw requirements first, unbiased.",
+      "done": true
+    },
+    {
+      "text": "Then reconcile against previous clean requirements and upstream feedback.",
+      "done": true
+    },
+    {
+      "text": "Organize by domain.",
+      "done": false
+    },
+    {
+      "text": "Write WHAT, not HOW.",
+      "done": false
+    }
+  ],
+  "gates": [
+    {
+      "text": "User has reviewed and approved",
+      "done": true
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "PP-REQ-1, PP-REQ-2, PP-REQ-3, PP-REQ-4 (discover with users, feedback loops, policy as metadata, glossary)",
+      "done": false
+    },
+    {
+      "text": "PP-APPROACH-4 (keep options reversible — don't lock in HOW decisions)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 5
+  }
+}

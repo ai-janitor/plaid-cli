@@ -1,0 +1,90 @@
+{
+  "stage": "4",
+  "name": "Decomposition",
+  "version": "vX",
+  "status": "done",
+  "prose": "Map requirements to spec units. Identify dependencies. Sequence build order. Produce: spec unit list with dependency graph. Produce: **boundary dependency map** — for every edge in the dependency graph, name the shared boundary and its contract type (naming contract, data shape, event type, state transition, route path). The boundary dependency map is a living artifact — create it here, refine it at every reflect gate through Stage 9.",
+  "items": [
+    {
+      "text": "Map requirements to spec units.",
+      "done": true
+    },
+    {
+      "text": "Identify dependencies.",
+      "done": true
+    },
+    {
+      "text": "Sequence build order.",
+      "done": true
+    }
+  ],
+  "gates": [
+    {
+      "text": "Produce: spec unit list with dependency graph.",
+      "done": true
+    },
+    {
+      "text": "Produce: boundary dependency map — for every edge in the dependency graph, name the shared boundary and its contract type (naming contract, data shape, event type, state transition, route path).",
+      "done": false
+    },
+    {
+      "text": "The boundary dependency map is a living artifact — create it here, refine it at every reflect gate through Stage 9.",
+      "done": false
+    },
+    {
+      "text": "User has reviewed and approved",
+      "done": false
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "CS-SEP-1 through CS-SEP-5 (full pass — read/write split, command/query, layers, bounded contexts, API surface)",
+      "done": false
+    },
+    {
+      "text": "CS-DATA-1 through CS-DATA-6 (full pass — ownership, state model, storage, schema, lifecycle, derived data)",
+      "done": false
+    },
+    {
+      "text": "CS-COMM-1 through CS-COMM-5 (full pass — sync/async, integrations, events, API style, serialization)",
+      "done": false
+    },
+    {
+      "text": "CS-CONSIST-1 through CS-CONSIST-5 (full pass — consistency model, transactions, concurrency, idempotency, ordering)",
+      "done": false
+    },
+    {
+      "text": "CS-SCALE-1 through CS-SCALE-5 (full pass — load, hot path, caching, Big-O, resource bounds)",
+      "done": false
+    },
+    {
+      "text": "CS-SEC-1 through CS-SEC-5 (full pass — trust boundaries, authn, authz, secrets, input validation)",
+      "done": false
+    },
+    {
+      "text": "CS-ERR-1 through CS-ERR-5 (full pass — failure taxonomy, retry, partial failure, degradation, observability)",
+      "done": false
+    },
+    {
+      "text": "PP-ORTH-1, PP-ORTH-3 (decomposed specs are self-contained, changes don't ripple)",
+      "done": false
+    },
+    {
+      "text": "PP-DRY-1 (no duplicated knowledge across spec units)",
+      "done": false
+    },
+    {
+      "text": "CA-COMP-1 (no cycles in dependency graph)",
+      "done": false
+    },
+    {
+      "text": "CA-COMP-4, CA-COMP-5 (classes that change together / are used together belong in same component)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 7
+  }
+}

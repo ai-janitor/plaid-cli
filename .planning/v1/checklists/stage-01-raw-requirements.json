@@ -1,0 +1,38 @@
+{
+  "stage": "1",
+  "name": "Raw requirements",
+  "version": "vX",
+  "status": "done",
+  "prose": "Capture user's words verbatim. Do not modify after initial capture.",
+  "items": [
+    {
+      "text": "Capture user's words verbatim.",
+      "done": true
+    },
+    {
+      "text": "Do not modify after initial capture.",
+      "done": false
+    }
+  ],
+  "gates": [
+    {
+      "text": "User has reviewed and approved",
+      "done": true
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "PP-REQ-1, PP-REQ-2, PP-REQ-3, PP-REQ-4 (discover with users, feedback loops, policy as metadata, glossary)",
+      "done": false
+    },
+    {
+      "text": "PP-APPROACH-4 (keep options reversible — don't lock in HOW decisions)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 3
+  }
+}

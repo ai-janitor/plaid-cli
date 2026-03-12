@@ -1,0 +1,89 @@
+{
+  "stage": "8",
+  "name": "Implementation",
+  "version": "vX",
+  "status": "done",
+  "prose": "Write code between scaffold comments. Implementation agents may only create or modify files that exist in the scaffold tree. Implement tests alongside production code, not after. Follow the pattern registry for every cross-cutting concern.",
+  "items": [
+    {
+      "text": "Write code between scaffold comments.",
+      "done": true
+    },
+    {
+      "text": "Implementation agents may only create or modify files that exist in the scaffold tree.",
+      "done": true
+    },
+    {
+      "text": "Implement tests alongside production code, not after.",
+      "done": true
+    },
+    {
+      "text": "Follow the pattern registry for every cross-cutting concern.",
+      "done": false
+    }
+  ],
+  "gates": [
+    {
+      "text": "User has reviewed and approved",
+      "done": true
+    },
+    {
+      "done": true
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "PP-CRAFT-1 (no programming by coincidence)",
+      "done": false
+    },
+    {
+      "text": "PP-CRAFT-2 (Big-O considered)",
+      "done": false
+    },
+    {
+      "text": "PP-CRAFT-3 (refactor on duplication or non-orthogonality)",
+      "done": false
+    },
+    {
+      "text": "PP-CRAFT-4 (test-first drives design)",
+      "done": false
+    },
+    {
+      "text": "PP-CRAFT-6 (small steps, check feedback)",
+      "done": false
+    },
+    {
+      "text": "PP-CONTRACT-2 (crash early)",
+      "done": false
+    },
+    {
+      "text": "PP-CONTRACT-3 (assertions for impossible conditions)",
+      "done": false
+    },
+    {
+      "text": "PP-CONTRACT-4 (finish what you start)",
+      "done": false
+    },
+    {
+      "text": "PP-DECOUPLE-1 through PP-DECOUPLE-5 (no train wrecks, Tell Don't Ask, Demeter, interfaces over inheritance, config externalized)",
+      "done": false
+    },
+    {
+      "text": "TDD-CYC-1 through TDD-CYC-6 (full Red-Green-Refactor cycle)",
+      "done": false
+    },
+    {
+      "text": "IC-SCALE-1 through IC-SCALE-4 (10x/100x/1000x, timeouts, streaming, assumptions documented)",
+      "done": false
+    },
+    {
+      "text": "IC-DATA-1 through IC-DATA-5 (schema validation at boundaries)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 5
+  }
+}

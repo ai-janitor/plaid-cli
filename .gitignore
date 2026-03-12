@@ -1,0 +1,28 @@
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+
+# Python runtime
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Database
+*.db
+
+# Cloned references
+quickstart/
+
+# OS junk
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,118 @@
+{
+  "stage": "7",
+  "name": "Scaffolding",
+  "version": "vX",
+  "status": "done",
+  "prose": "Create stubs, file headers, pseudo-logic per project conventions. Execute in two phases: tree first (biased generalist), then content (unbiased specialists per spec). **Manifest-driven file creation:** the tree agent produces a `.scaffold-manifest` file (tab-separated: path, spec, purpose, responsibilities, not_responsible_for, dependencies) instead of creating files individually. Run `python3 scripts/scaffold-from-manifest.py <manifest> --project-root <path>` to create the directory structure and stamp every file with its `SPEC:` provenance tag and comment header in one pass. See `templates/scaffold-manifest-format.md` for the manifest format. This eliminates hundreds of individual file-creation tool calls. Every scaffold file header must include a `SPEC:` provenance tag pointing to the spec that owns it (e.g. `SPEC: .planning/v2/specs/s06-gemm.md`). The tree agent also produces: test file stubs for every contract in `test-contracts.md`, and a **pattern registry** (`pattern-registry.md`) declaring the one chosen pattern per cross-cutting concern (HTTP client, error handling, data access, logging, config, template rendering). **Convergence gate:** zero tree mutations across specialist passes. After specialist passes converge, run **cross-reference reconciliation**: extract every string-based cross-reference (template names, DOM IDs, CSS classes, route paths, config keys) from all scaffold files and verify both sides agree. Run **pattern consistency check**: verify all scaffold files follow the pattern registry — deviations are findings. Run **test contract coverage check**: verify every contract in `test-contracts.md` has a test stub in the scaffold. Run **spec provenance check**: `grep -rh \"SPEC:\" src/` must cover every spec in the decomposition — missing or mismatched tags are findings. Name mismatches between scaffold files are findings that block Stage 8. Use the boundary dependency map from Stage 4 (refined at Stage 6) as input — check every named edge. Append newly discovered file-level boundaries to the map.",
+  "items": [
+    {
+      "text": "Create stubs, file headers, pseudo-logic per project conventions.",
+      "done": true
+    },
+    {
+      "text": "Execute in two phases: tree first (biased generalist), then content (unbiased specialists per spec).",
+      "done": true
+    },
+    {
+      "text": "Manifest-driven file creation: the tree agent produces a `.scaffold-manifest` file (tab-separated: path, spec, purpose, responsibilities, not_responsible_for, dependencies) instead of creating files individually.",
+      "done": true
+    },
+    {
+      "text": "Run `python3 scripts/scaffold-from-manifest.py <manifest> --project-root <path>` to create the directory structure and stamp every file with its `SPEC:` provenance tag and comment header in one pass.",
+      "done": true
+    },
+    {
+      "text": "See `templates/scaffold-manifest-format.md` for the manifest format.",
+      "done": true
+    },
+    {
+      "text": "This eliminates hundreds of individual file-creation tool calls.",
+      "done": true
+    },
+    {
+      "text": "`SPEC: .planning/v2/specs/s06-gemm.md`).",
+      "done": false
+    },
+    {
+      "text": "The tree agent also produces: test file stubs for every contract in `test-contracts.md`, and a pattern registry (`pattern-registry.md`) declaring the one chosen pattern per cross-cutting concern (HTTP client, error handling, data access, logging, config, template rendering).",
+      "done": false
+    },
+    {
+      "text": "Use the boundary dependency map from Stage 4 (refined at Stage 6) as input — check every named edge.",
+      "done": false
+    },
+    {
+      "text": "Append newly discovered file-level boundaries to the map.",
+      "done": false
+    }
+  ],
+  "gates": [
+    {
+      "text": "Every scaffold file header must include a `SPEC:` provenance tag pointing to the spec that owns it (e.g.",
+      "done": true
+    },
+    {
+      "text": "Convergence gate: zero tree mutations across specialist passes.",
+      "done": true
+    },
+    {
+      "text": "After specialist passes converge, run cross-reference reconciliation: extract every string-based cross-reference (template names, DOM IDs, CSS classes, route paths, config keys) from all scaffold files and verify both sides agree.",
+      "done": false
+    },
+    {
+      "text": "Run pattern consistency check: verify all scaffold files follow the pattern registry — deviations are findings.",
+      "done": false
+    },
+    {
+      "text": "Run test contract coverage check: verify every contract in `test-contracts.md` has a test stub in the scaffold.",
+      "done": false
+    },
+    {
+      "text": "Run spec provenance check: `grep -rh \"SPEC:\" src/` must cover every spec in the decomposition — missing or mismatched tags are findings.",
+      "done": false
+    },
+    {
+      "text": "Name mismatches between scaffold files are findings that block Stage 8.",
+      "done": false
+    },
+    {
+      "text": "User has reviewed and approved",
+      "done": false
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "CS-* verify scaffold embodies Stage 4 decisions (event types exist if async, separate read/write models if CQRS, etc.)",
+      "done": false
+    },
+    {
+      "text": "PP-APPROACH-3 (no broken windows — fix bad naming/structure immediately)",
+      "done": false
+    },
+    {
+      "text": "PP-DRY-1, PP-DRY-2 (single source of truth, no inter-developer duplication)",
+      "done": false
+    },
+    {
+      "text": "PP-ORTH-1 (components self-contained)",
+      "done": false
+    },
+    {
+      "text": "IC-LAY-1, IC-LAY-2, IC-LAY-3 (layering discipline — structure before headers before signatures)",
+      "done": false
+    },
+    {
+      "text": "IC-HDR-1 through IC-HDR-5 (every file has PURPOSE, RESPONSIBILITIES, NOT RESPONSIBLE FOR, DEPENDENCIES; headers permanent)",
+      "done": false
+    },
+    {
+      "text": "CA-DEP-1, CA-DEP-2, CA-DEP-5 (dependencies inward, entities clean, DIP at boundaries)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 18
+  }
+}

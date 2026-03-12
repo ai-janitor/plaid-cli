@@ -1,0 +1,90 @@
+{
+  "stage": "6",
+  "name": "Specifications",
+  "version": "vX",
+  "status": "done",
+  "prose": "Fill each spec with behavior, constraints, and edge cases. Write WHAT, not HOW. Leave zero judgment calls for the implementer. After specs are approved, a **separate agent** (not the spec-writing agents) reads each spec and extracts every testable behavioral contract to `test-contracts.md` — input/output pairs, precondition/postcondition pairs, edge case expected outcomes. Vague behavior (\"handles errors appropriately\") is not a contract — rewrite the spec. `test-contracts.md` is a **living artifact**: behavioral contracts (Stage 6) → test file stubs (Stage 7) → test pseudo-logic (Stage 7d) → implemented tests (Stage 8) → reconciled (Stage 8b). **Reflect gate: cross-spec contract reconciliation.** After all specs are written, assign one agent per boundary edge (from the dependency map). That agent reads both specs and extracts the contract each side assumes — function name, event type, DOM ID, state name, route path. Mismatches are findings. Append newly discovered boundaries to the dependency map.",
+  "items": [
+    {
+      "text": "Fill each spec with behavior, constraints, and edge cases.",
+      "done": true
+    },
+    {
+      "text": "Write WHAT, not HOW.",
+      "done": true
+    },
+    {
+      "text": "Leave zero judgment calls for the implementer.",
+      "done": true
+    },
+    {
+      "text": "After specs are approved, a separate agent (not the spec-writing agents) reads each spec and extracts every testable behavioral contract to `test-contracts.md` — input/output pairs, precondition/postcondition pairs, edge case expected outcomes.",
+      "done": false
+    },
+    {
+      "text": "Vague behavior (\"handles errors appropriately\") is not a contract — rewrite the spec.",
+      "done": false
+    },
+    {
+      "text": "After all specs are written, assign one agent per boundary edge (from the dependency map).",
+      "done": false
+    },
+    {
+      "text": "That agent reads both specs and extracts the contract each side assumes — function name, event type, DOM ID, state name, route path.",
+      "done": false
+    },
+    {
+      "text": "Append newly discovered boundaries to the dependency map.",
+      "done": false
+    }
+  ],
+  "gates": [
+    {
+      "text": "`test-contracts.md` is a living artifact: behavioral contracts (Stage 6) → test file stubs (Stage 7) → test pseudo-logic (Stage 7d) → implemented tests (Stage 8) → reconciled (Stage 8b).",
+      "done": true
+    },
+    {
+      "text": "Reflect gate: cross-spec contract reconciliation.",
+      "done": true
+    },
+    {
+      "text": "Mismatches are findings.",
+      "done": false
+    },
+    {
+      "text": "User has reviewed and approved",
+      "done": false
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "CS-* spot check (verify specs are consistent with Stage 4 decisions — new questions are findings)",
+      "done": false
+    },
+    {
+      "text": "PP-CONTRACT-1 (preconditions, postconditions, invariants defined)",
+      "done": false
+    },
+    {
+      "text": "PP-REQ-3 (policy is metadata — specs don't hardcode business rules)",
+      "done": false
+    },
+    {
+      "text": "PP-REQ-4 (glossary — terms consistent across specs)",
+      "done": false
+    },
+    {
+      "text": "TDD-COV-1, TDD-COV-2, TDD-COV-3 (contracts cover happy path, edge cases, error cases)",
+      "done": false
+    },
+    {
+      "text": "CA-BOUND-3 (data crossing boundaries is simple structures)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 12
+  }
+}

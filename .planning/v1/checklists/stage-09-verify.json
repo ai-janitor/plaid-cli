@@ -1,0 +1,62 @@
+{
+  "stage": "9",
+  "name": "Verify",
+  "version": "vX",
+  "status": "in-progress",
+  "prose": "Two layers. Layer 1 (static): run build, vet, and test, including frontend assertions — template manifest completeness, CSS link validation, orphan template detection. Layer 2 (runtime): run smoke tests — app boot, primary flow, moving parts connect. Coordinator writes runbook, spawns verify agent.",
+  "items": [
+    {
+      "text": "Two layers.",
+      "done": false
+    },
+    {
+      "text": "Layer 1 (static): run build, vet, and test, including frontend assertions — template manifest completeness, CSS link validation, orphan template detection.",
+      "done": false
+    },
+    {
+      "text": "Layer 2 (runtime): run smoke tests — app boot, primary flow, moving parts connect.",
+      "done": false
+    }
+  ],
+  "gates": [
+    {
+      "text": "Coordinator writes runbook, spawns verify agent.",
+      "done": false
+    },
+    {
+      "text": "User has reviewed and approved",
+      "done": false
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "PP-DELIVER-1 (version control drives builds/tests/releases)",
+      "done": false
+    },
+    {
+      "text": "PP-DELIVER-2 (no manual procedures)",
+      "done": false
+    },
+    {
+      "text": "PP-DELIVER-3 (not done until all tests pass)",
+      "done": false
+    },
+    {
+      "text": "PP-DELIVER-5 (state coverage, not just code coverage)",
+      "done": false
+    },
+    {
+      "text": "CA-TEST-1, CA-TEST-2 (behavior not implementation, structured by use case)",
+      "done": false
+    },
+    {
+      "text": "TDD-BUG-1 through TDD-BUG-4 (bug fix protocol — reproduce, confirm, fix, full suite)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 5
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "stage": "8b",
+  "name": "Scaffold Reconciliation",
+  "version": "vX",
+  "status": "not-started",
+  "prose": "Convergent single-pass verification. For every file in the scaffold tree, classify as IMPLEMENTED, SUPERSEDED (name the replacement), INTENTIONAL-EMPTY (state the rationale), or MISSING (this is a finding). Diff scaffold file list against implementation file list. Any file in one but not the other is a finding. MISSING entries block Stage 9. **Wiring check**: for every coordinator/orchestrator/bridge file, verify it actually calls the sub-packages it references. A file that imports a package but never calls its functions is a finding. **Test contract reconciliation**: for every contract in `test-contracts.md`, verify a test function exists with actual assertions (not stubs). Contracts without tests block Stage 9. **Pattern drift check**: verify all implementation files follow `pattern-registry.md`. No package may use a different approach than the registered pattern for the same concern. **Spec provenance reconciliation**: `grep -rh \"SPEC:\" src/` \u2014 every spec must have at least one file, every file must trace to exactly one spec, no orphan tags pointing to nonexistent specs. **Dependency map update**: append newly discovered function-level boundaries. The map now has three layers: spec-to-spec (Stage 4/6), file-to-file (Stage 7), function-to-function (Stage 8b).",
+  "items": [
+    {
+      "text": "Convergent single-pass verification.",
+      "done": false
+    },
+    {
+      "text": "Diff scaffold file list against implementation file list.",
+      "done": false
+    },
+    {
+      "text": "Any file in one but not the other is a finding.",
+      "done": false
+    },
+    {
+      "text": "A file that imports a package but never calls its functions is a finding.",
+      "done": false
+    },
+    {
+      "text": "No package may use a different approach than the registered pattern for the same concern.",
+      "done": false
+    },
+    {
+      "text": "Dependency map update: append newly discovered function-level boundaries.",
+      "done": false
+    },
+    {
+      "text": "The map now has three layers: spec-to-spec (Stage 4/6), file-to-file (Stage 7), function-to-function (Stage 8b).",
+      "done": false
+    }
+  ],
+  "gates": [
+    {
+      "text": "For every file in the scaffold tree, classify as IMPLEMENTED, SUPERSEDED (name the replacement), INTENTIONAL-EMPTY (state the rationale), or MISSING (this is a finding).",
+      "done": false
+    },
+    {
+      "text": "MISSING entries block Stage 9.",
+      "done": false
+    },
+    {
+      "text": "Wiring check: for every coordinator/orchestrator/bridge file, verify it actually calls the sub-packages it references.",
+      "done": false
+    },
+    {
+      "text": "Test contract reconciliation: for every contract in `test-contracts.md`, verify a test function exists with actual assertions (not stubs).",
+      "done": false
+    },
+    {
+      "text": "Contracts without tests block Stage 9.",
+      "done": false
+    },
+    {
+      "text": "Pattern drift check: verify all implementation files follow `pattern-registry.md`.",
+      "done": false
+    },
+    {
+      "text": "Spec provenance reconciliation: `grep -rh \"SPEC:\" src/` \u2014 every spec must have at least one file, every file must trace to exactly one spec, no orphan tags pointing to nonexistent specs.",
+      "done": false
+    },
+    {
+      "text": "User has reviewed and approved",
+      "done": false
+    }
+  ],
+  "cross_refs": [
+    {
+      "text": "PP-DELIVER-4 (find bugs once \u2014 every bug gets a test)",
+      "done": false
+    },
+    {
+      "text": "PP-DRY-2 (no inter-developer duplication across implemented specs)",
+      "done": false
+    },
+    {
+      "text": "PP-ORTH-3 (change to one module doesn't ripple)",
+      "done": false
+    },
+    {
+      "text": "IC-VER-1 through IC-VER-4 (compiles, imports correct, tests pass, verified before declaring done)",
+      "done": false
+    },
+    {
+      "text": "TDD-QUAL-1 (tests verify behavior not implementation)",
+      "done": false
+    }
+  ],
+  "findings": [],
+  "progress": {
+    "done": 0,
+    "total": 15
+  }
+}
