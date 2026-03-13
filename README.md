@@ -4,7 +4,13 @@ CLI tool to pull personal bank transactions from multiple accounts via the Plaid
 
 ## Install
 
-### Quick (recommended)
+### One-liner
+
+```bash
+curl -sSL https://raw.githubusercontent.com/ai-janitor/plaid-cli/master/install.sh | bash
+```
+
+### Clone and setup
 
 ```bash
 git clone https://github.com/ai-janitor/plaid-cli.git
@@ -12,7 +18,7 @@ cd plaid-cli
 ./setup.sh
 ```
 
-Installs via `pipx` to `~/.local/bin/plaid` — isolated venv, works from anywhere, survives repo deletion.
+Both install via `pipx` to `~/.local/bin/plaid` — isolated venv, works from anywhere, survives repo deletion.
 
 ### pipx (manual)
 
