@@ -10,7 +10,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-# --- Load .env file from current directory if it exists ---
+# --- Load .env file: check ~/.config/plaid/.env, then current directory ---
+load_dotenv(Path("~/.config/plaid/.env").expanduser())
 load_dotenv()
 
 

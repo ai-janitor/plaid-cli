@@ -35,12 +35,14 @@ pipx install "$INSTALL_DIR" --force --quiet
 echo ""
 echo "Installed plaid-cli to ~/.local/bin/plaid"
 
-# Create .env if needed
-if [ ! -f "$INSTALL_DIR/.env" ]; then
-    cp "$INSTALL_DIR/.env.example" "$INSTALL_DIR/.env"
+# Create config dir and .env if needed
+CONFIG_DIR="$HOME/.config/plaid"
+if [ ! -f "$CONFIG_DIR/.env" ]; then
+    mkdir -p "$CONFIG_DIR"
+    cp "$INSTALL_DIR/.env.example" "$CONFIG_DIR/.env"
     echo ""
     echo "Edit your credentials:"
-    echo "  \$EDITOR $INSTALL_DIR/.env"
+    echo "  \$EDITOR $CONFIG_DIR/.env"
     echo ""
     echo "Get keys at: https://dashboard.plaid.com → Developers → Keys"
 fi
