@@ -94,7 +94,15 @@ def main():
     if not config.get("client_id") or not config.get("secret"):
         output = format_error(
             "Missing Plaid credentials.",
-            hint="Set PLAID_CLIENT_ID and PLAID_SECRET environment variables, or add them to ~/.config/plaid/config.yaml",
+            hint=(
+                "Run these commands to configure:\n"
+                "\n"
+                "  mkdir -p ~/.config/plaid\n"
+                "  echo 'PLAID_CLIENT_ID=your_client_id' > ~/.config/plaid/.env\n"
+                "  echo 'PLAID_SECRET=your_sandbox_secret' >> ~/.config/plaid/.env\n"
+                "\n"
+                "Get your keys at: https://dashboard.plaid.com → Developers → Keys"
+            ),
             json_mode=json_mode,
         )
         if output:
