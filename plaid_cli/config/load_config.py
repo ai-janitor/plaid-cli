@@ -8,6 +8,11 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+# --- Load .env file from current directory if it exists ---
+load_dotenv()
+
 
 def _load_config_file(config_path):
     """Load config from file. Try yaml first, fall back to key=value parsing."""
