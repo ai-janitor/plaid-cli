@@ -9,6 +9,7 @@ from plaid_cli.commands.list_items import cmd_list_items
 from plaid_cli.commands.list_accounts import cmd_list_accounts
 from plaid_cli.commands.get_transactions import cmd_get_transactions
 from plaid_cli.commands.sync_transactions import cmd_sync
+from plaid_cli.commands.configure import cmd_configure
 
 __all__ = [
     "cmd_create_link",
@@ -16,4 +17,5 @@ __all__ = [
     "cmd_list_accounts",
     "cmd_get_transactions",
     "cmd_sync",
+    "cmd_configure",
 ]

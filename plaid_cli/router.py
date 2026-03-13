@@ -13,7 +13,7 @@ import sys
 import plaid
 
 from plaid_cli.config import load_config
-from plaid_cli.commands import cmd_create_link, cmd_list_items, cmd_list_accounts, cmd_get_transactions, cmd_sync
+from plaid_cli.commands import cmd_create_link, cmd_list_items, cmd_list_accounts, cmd_get_transactions, cmd_sync, cmd_configure
 from plaid_cli.output import format_output, format_error
 from plaid_cli.database import get_connection
 
@@ -64,6 +64,10 @@ def _build_parser():
     sync_parser.add_argument("--item", default=None, help="Sync specific item ID only")
     sync_parser.set_defaults(func=cmd_sync, command="sync")
 
+# --- Add 'configure' verb subparser — interactive credential setup ---
+    configure_parser = subparsers.add_parser("configure", help="Set up Plaid credentials")
+    configure_parser.set_defaults(func=cmd_configure, command="configure")
+
     return parser
 
 
@@ -90,19 +94,16 @@ def main():
 # --- Load config via cascade: args > env > config file > defaults ---
     config = load_config(args)
 
+# --- Configure command: runs before credential check, no DB needed ---
+    if args.verb == "configure":
+        args.func(args, config, None)
+        return
+
     # --- Missing credentials: format error with hint, exit 1 ---
     if not config.get("client_id") or not config.get("secret"):
         output = format_error(
             "Missing Plaid credentials.",
-            hint=(
-                "Run these commands to configure:\n"
-                "\n"
-                "  mkdir -p ~/.config/plaid\n"
-                "  echo 'PLAID_CLIENT_ID=your_client_id' > ~/.config/plaid/.env\n"
-                "  echo 'PLAID_SECRET=your_sandbox_secret' >> ~/.config/plaid/.env\n"
-                "\n"
-                "Get your keys at: https://dashboard.plaid.com → Developers → Keys"
-            ),
+            hint="Run 'plaid configure' to set up your credentials.",
             json_mode=json_mode,
         )
         if output:
