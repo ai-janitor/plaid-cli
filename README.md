@@ -7,7 +7,7 @@ CLI tool to pull personal bank transactions from multiple accounts via the Plaid
 ### One-liner
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/ai-janitor/plaid-cli/master/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/ai-janitor/plaid-cli/refs/heads/master/install.sh | bash
 ```
 
 ### Clone and setup
